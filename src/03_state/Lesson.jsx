@@ -6,8 +6,8 @@ class CounterButton extends Component {
     }
 
     handleClick = () => {
-        this.setState( prevState => ({
-            counter: ++prevState.counter,
+        this.setState( ({ counter }) => ({
+            counter: ++counter,
         }));
     }
 
