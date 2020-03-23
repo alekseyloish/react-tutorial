@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 // import Lesson from './02_components/Lesson.jsx';
 
 // import CounterButton from './03_state/Lesson.jsx';
-import CounterButton from './04_props/Lesson.jsx';
+// import CounterButton from './04_props/Lesson.jsx';
+import {Lesson, Button, Counter} from './05_props/Lesson.jsx';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<CounterButton />, document.getElementById('root'));
+ReactDOM.render(<Lesson child={<Button />}><Counter /></Lesson>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
