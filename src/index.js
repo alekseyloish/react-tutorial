@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom';
 // import CounterButton from './03_state/Lesson.jsx';
 // import CounterButton from './04_props/Lesson.jsx';
 // import {Lesson, Button, Counter} from './05_props/Lesson.jsx';
-import App from './06_events/Lesson.jsx';
+// import App from './06_events/Lesson.jsx';
+import App from './07_conditional_rendering/Lesson.jsx';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
