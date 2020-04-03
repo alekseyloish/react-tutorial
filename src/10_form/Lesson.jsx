@@ -31,21 +31,15 @@ class Form extends Component {
         }
     }
 
-    handleInputChange = ({ target: { value } }) => {
-        this.setState({
-            inputText: value,
-        });
-    }
+    inputRef = React.createRef();
+    textareaRef = React.createRef();
+    selectRef = React.createRef();
 
-    handleTextareaChange = ({ target: { value } }) => {
+    handleChange = () => {
         this.setState({
-            textareaText: value,
-        });
-    }
-
-    handleSelectChange = ({ target: { value } }) => {
-        this.setState({
-            selectText: value,
+            inputText: this.inputRef.current.value,
+            textareaText: this.textareaRef.current.value,
+            selectText: this.selectRef.current.value,
         });
     }
 
@@ -77,27 +71,30 @@ class Form extends Component {
                     <label>
                         Name:
                         <input
+                            ref={this.inputRef}
                             type="text"
                             name="name"
                             id="name"
                             value={inputText}
-                            onChange={this.handleInputChange}
+                            onChange={this.handleChange}
                         />
                     </label>
 
                     {/* TextArea */} <br/>
                     <label htmlFor="text">Text:</label>
                     <textarea
+                        ref={this.textareaRef}
                         name="text"
                         id="text"
                         value={textareaText}
-                        onChange={this.handleTextareaChange}
+                        onChange={this.handleChange}
                     />
 
                     {/* Select */} <br/>
                     <select
+                        ref={this.selectRef}
                         value={selectText}
-                        onChange={this.handleSelectChange}>
+                        onChange={this.handleChange}>
                         {POSITIONS.map( ({id, value, title}) => (
                             <option key={id} value={value}>{title}</option>
                         ))}
