@@ -9,10 +9,11 @@ import ReactDOM from 'react-dom';
 // import App from './07_conditional_rendering/Lesson.jsx';
 // import App from './08_lists_and_keys/Lesson.jsx';
 // import Table from './09_fragments_and_css/Lesson.jsx';
-import Form from './10_form/Lesson.jsx';
+// import Form from './10_form/Lesson.jsx';
+import Lesson from './13_hoc/Lesson.jsx';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Form />, document.getElementById('root'));
+ReactDOM.render(<Lesson />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
